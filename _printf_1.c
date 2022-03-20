@@ -67,7 +67,7 @@ int _printf(const char *format, ...)
 		else
 		{
 			i++;
-			switch(format[i])
+			switch (format[i])
 			{
 				case 'c':
 					str = va_arg(list, char*);
@@ -92,5 +92,5 @@ int _printf(const char *format, ...)
 		}
 		i++;
 	}
-	return(size);
+	return (size);
 }
