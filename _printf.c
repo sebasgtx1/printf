@@ -42,6 +42,16 @@ int _printf(const char *format, ...)
                                		value = va_arg(list, unsigned int);
                                        	size += print_number_u(value);
                                        	break;
+				case 'b':
+					value = va_arg(list, int);
+                                        size += print_binary(value);
+                                        break;
+				default:
+					if (format[i] != '%')
+						write(1, &format[i - 1], 1);
+					write(1, &format[i], 1);
+					size++;
+					break;
 			}
 				
 		}
