@@ -15,6 +15,6 @@ int print_string(char *str)
         {
                 write(1, &str[j], 1);
         }
-	size--;
-        return (size);
+
+	return (size);
 }

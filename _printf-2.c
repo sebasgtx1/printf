@@ -1,14 +1,15 @@
 #include "main.h"
 /**
  * print_number - prints an integer
- * @n: integer
+ * @str: integer in char* format
  * Return: no return
  */
 
-int print_number(int n)
+int print_number(char *str)
 
 {
-unsigned int i, d, c, minus, value, size;
+	int n, i, d, c, minus, value, size;
+	n = _char_to_number(str);
 
         if (n < 0)
         {
@@ -36,5 +37,6 @@ unsigned int i, d, c, minus, value, size;
                 write(1, &value, 1);
                 size++;
         }
-        return (size - 2);
+	size++;
+        return (size);
 }
