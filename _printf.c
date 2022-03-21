@@ -9,8 +9,8 @@
 int _printf(const char *format, ...)
 {
 	va_list list;
-	int i = 0, size = 0, value;
-	char *str;
+	int i = 0, size = 0;
+	int (*fun)(va_list);
 
 	va_start(list, format);
 
@@ -22,38 +22,11 @@ int _printf(const char *format, ...)
 		{
 			i++;
 			size--;
-			switch (format[i])
-			{
-				case 'c':
-					str = va_arg(list, char*);
-					size += print_char(str);
-					break;
-				case 's':
-					str = va_arg(list, char*);
-					size += print_string(str);
-					break;
-				case 'd':
-				case 'i':
-					value = va_arg(list, int);
-					size += print_number(value);
-					break;
-							
-				case 'u':
-                               		value = va_arg(list, unsigned int);
-                                       	size += print_number_u(value);
-                                       	break;
-				case 'b':
-					value = va_arg(list, int);
-                                        size += print_binary(value);
-                                        break;
-				default:
-					if (format[i] != '%')
-						write(1, &format[i - 1], 1);
-					write(1, &format[i], 1);
-					size++;
-					break;
-			}
-				
+			fun = get_fun(format[i]);
+			if (!fun)
+				return (0);
+
+			size +=fun(list);	
 		}
 		i++;
 		size++;
