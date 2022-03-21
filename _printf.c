@@ -32,15 +32,16 @@ int _printf(const char *format, ...)
 					str = va_arg(list, char*);
 					size += print_string(str);
 					break;
-				case 'd' :
+				case 'd':
 				case 'i':
-				value = va_arg(list, int);
+					value = va_arg(list, int);
 					size += print_number(value);
 					break;
+							
 				case 'u':
-                                value = va_arg(list, unsigned int);
-                                        size += print_number_u(value);
-                                        break;
+                               		value = va_arg(list, unsigned int);
+                                       	size += print_number_u(value);
+                                       	break;
 			}
 				
 		}
