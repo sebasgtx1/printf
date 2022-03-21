@@ -1,25 +1,16 @@
 #include "main.h"
 /**
- * print_number - prints an integer
- * @str: integer in char* format
+ * print_number - prints an unsigned integer
+ * @n: integrer
  * Return: no return
  */
-int print_number(int n)
+
+int print_number_u(unsigned int n)
 
 {
-	int i, d, c, minus, value, size;
-	
-        if (n < 0)
-        {                
-		minus = 45;
-                write (1, &minus, 1);
-                i = n * -1;
-        }
-        else
-        {
-                i = n;
-        }
-
+	unsigned int i, d, c, value, size;
+ 
+ 	i = n;
         d = i;
         c = 1;
 

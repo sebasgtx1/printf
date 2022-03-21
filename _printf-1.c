@@ -7,10 +7,12 @@
  */        
 int print_string(char *str)
 {	
+
 	int size = 0, j;
 
-        if (!str)
-                return (0);
+	if (!str)
+		return (0);
+
         for (j = 0; str[j]; j++, size++)
         {
                 write(1, &str[j], 1);

@@ -11,7 +11,6 @@ int _printf(const char *format, ...)
 	va_list list;
 	int i = 0, size = 0, value;
 	char *str;
-	int (*_print_fun) (char*);
 
 	va_start(list, format);
 
@@ -23,11 +22,7 @@ int _printf(const char *format, ...)
 		{
 			i++;
 			size--;
-			
-			_print_fun = get_fun()
-
-
-		/**	switch (format[i])
+			switch (format[i])
 			{
 				case 'c':
 					str = va_arg(list, char*);
@@ -37,17 +32,22 @@ int _printf(const char *format, ...)
 					str = va_arg(list, char*);
 					size += print_string(str);
 					break;
-				case 'd':
-					value = va_arg(list, int);
-					size += print_number(_number_to_char(value));
+				case 'd' :
+				case 'i':
+				value = va_arg(list, int);
+					size += print_number(value);
 					break;
+				case 'u':
+                                value = va_arg(list, unsigned int);
+                                        size += print_number_u(value);
+                                        break;
 			}
-		
-		*/
+				
 		}
 		i++;
 		size++;
 	}
 	va_end(list);
+
 	return (size);
 }
