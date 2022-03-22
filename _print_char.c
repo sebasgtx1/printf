@@ -8,11 +8,7 @@
 
 int print_char(va_list str)
 {
-<<<<<<< HEAD
-	int value;
-=======
 	char value;
->>>>>>> SebastianBlandon
 
 	value = va_arg(str, int);
 	if (!value)
