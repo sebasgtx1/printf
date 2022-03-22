@@ -8,9 +8,8 @@
 
 int print_char(va_list str)
 {
-	char value;
+	int value = va_arg(str, int);
 
-	value = va_arg(str, int);
 	if (!value)
 		return (0);
 
