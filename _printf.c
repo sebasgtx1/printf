@@ -22,11 +22,6 @@ int _printf(const char *format, ...)
 		{
 			i++;
 			size--;
-			if (format[i] == '%')
-			{
-				write(1, &format[i], 1);
-				break;
-			}
 			fun = get_fun(format[i]);
 			if (!fun)
 			{
