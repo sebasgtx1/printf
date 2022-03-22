@@ -14,19 +14,19 @@ int (*get_fun(char format))(va_list)
 	{"s", print_string},
 	{"d", print_number},
 	{"i", print_number},
-	{"b", print_binary}
-
+	{"b", print_binary},
+	{NULL, NULL}
 	};
 	int i;
 
 	i = 0;
 
-	while (i < 8)
+	while (i < 10)
 	{
 		if (format == frts->frt[i])
-			break;
+			return (frts[i / 2].f);
 		i++;
 	}
 
-	return (frts[i / 2].f);
+	return (0);
 }
