@@ -14,6 +14,8 @@ int _printf(const char *format, ...)
 
 	va_start(list, format);
 
+	if (format == NULL || (format[0] == '%' && format[1] == '\0'))
+		return (-1);
 	while (format && format[i])
 	{
 		if (!format[i])
@@ -27,9 +29,17 @@ int _printf(const char *format, ...)
 			size--;
 			fun = get_fun(format[i]);
 			if (!fun)
-				return (0);
-
-			size += fun(list);
+			{
+				if (format[i] != '%')
+    			{
+					write(1, &format[i - 1], 1);
+        			size++;
+    			}
+				write(1, &format[i], 1);
+				size++;
+			}
+			else
+				size += fun(list);
 		}
 		i++;
 		size++;
