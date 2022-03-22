@@ -1,8 +1,8 @@
 #include "main.h"
 /**
- * _char*_to_number - converts a char* to an int
- * @str : string to be converted to an int
- * Return : the string in int format
+ * _char_to_number - converts a char* to an int
+ * @str: string to be converted to an int
+ * Return: the string in int format
  */
 
 int _char_to_number(char *str)
@@ -11,10 +11,10 @@ int _char_to_number(char *str)
 
 	if (!str)
 		return (0);
-	
+
 	for (; str[i]; i++)
 		digits *= 10;
-	
+
 	digits /= 10;
 
 	while (str[j])
@@ -24,6 +24,6 @@ int _char_to_number(char *str)
 		digits /= 10;
 		j++;
 	}
-	
+
 	return (number);
 }

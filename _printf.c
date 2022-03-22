@@ -3,7 +3,7 @@
 /**
  * _printf - _printf function structure
  * @format: const char input
- * Return : size int
+ * Return: size
  */
 
 int _printf(const char *format, ...)
@@ -26,7 +26,7 @@ int _printf(const char *format, ...)
 			if (!fun)
 				return (0);
 
-			size +=fun(list);	
+			size += fun(list);
 		}
 		i++;
 		size++;

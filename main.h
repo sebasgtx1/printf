@@ -23,7 +23,7 @@ int _printf(const char *format, ...);
 int (*get_fun(char format))(va_list);
 int print_char(va_list str);
 int print_string(va_list str);
-char* _number_to_char(int n);
+char *_number_to_char(int n);
 int print_number(va_list number);
 int _char_to_number(char *str);
 int print_number_u(unsigned int);

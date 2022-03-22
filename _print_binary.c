@@ -1,8 +1,8 @@
 #include "main.h"
 
 /**
- * print_binary - prints a number in binary 
- * @number: number to be printed
+ * print_binary - prints a number in binary
+ * @num: number to be printed
  * Return: original number size
  */
 
@@ -14,11 +14,11 @@ int print_binary(va_list num)
 	char binary;
 	char *str;
 	char *number;
-	str =_number_to_char(n);
 
-	while(str[i])
+	str = _number_to_char(n);
+	while (str[i])
 	{
-	i++;
+		i++;
 	}
 
 	number = malloc(i + 1);
@@ -27,19 +27,18 @@ int print_binary(va_list num)
 		free(number);
 		return (0);
 	}
-	while(n != 0)
+	while (n != 0)
 	{
 		binary = n % 2 + '0';
 		number[j] = binary;
 		n /= 2;
 		j++;
-	
 	}
 	reverse_array(number);
 	j = 0;
 	while (number[j])
 	{
-		write(1,&number[j], 1);
+		write(1, &number[j], 1);
 		j++;
 	}
 	free(number);

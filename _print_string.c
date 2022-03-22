@@ -1,8 +1,8 @@
 #include "main.h"
 /**
  * print_string - function prints an string
- * @str: is the string
- * Return : size number
+ * @list: argument to be printed
+ * Return: size number
  */
 int print_string(va_list list)
 {
@@ -10,10 +10,12 @@ int print_string(va_list list)
 	char *str;
 
 	str = va_arg(list, char *);
+
 	if (!str)
- 		return (0);
+		return (0);
+
 	for (j = 0; str[j]; j++, size++)
-        	write(1, &str[j], 1);
+		write(1, &str[j], 1);
 
 	return (size);
 }

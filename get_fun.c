@@ -2,7 +2,7 @@
 
 /**
  * get_fun - gets the correct printf funtion
- * @frt - format structure
+ * @format: format structure
  * Return: the printf funtion
  */
 
@@ -15,7 +15,7 @@ int (*get_fun(char format))(va_list)
 	{"d", print_number},
 	{"i", print_number},
 	{"b", print_binary}
-		
+
 	};
 	int i;
 
