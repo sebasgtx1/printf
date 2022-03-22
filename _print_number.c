@@ -8,12 +8,13 @@ int print_number(va_list number)
 
 {
 	int n = va_arg(number, int);
-	int i, d, c, minus, value, size;
+	int i, d, c, minus, value, size = 0;
 
 	if (n < 0)
 	{
 		minus = 45;
 		write(1, &minus, 1);
+		size++;
 		i = n * -1;
 	}
 	else
