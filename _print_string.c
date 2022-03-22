@@ -17,11 +17,10 @@ int print_string(va_list list)
 	{
 		for (i = 0; nulcase[i]; i++)
 			write(1, &nulcase[i], 1);
-		return (0);
+		return (6);
 	}
 
 	for (j = 0; str[j]; j++, size++)
 		write(1, &str[j], 1);
-
 	return (size);
 }
