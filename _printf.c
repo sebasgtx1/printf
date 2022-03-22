@@ -21,13 +21,17 @@ int _printf(const char *format, ...)
 	{
 		if (!format[i])
 			return (0);
-
-		if (format[i] != '%')
+		if (format[i] != '%' && format[i] != '%')
 			write(1, &format[i], 1);
 		else
 		{
 			i++;
 			size--;
+			if (format[i] == '%')
+			{
+				write(1, &format[i], 1);
+				break;
+			}
 			fun = get_fun(format[i]);
 			if (!fun)
 				return (0);
