@@ -17,7 +17,7 @@ int _printf(const char *format, ...)
 	while (format && format[i])
 	{
 		if (!format[i])
-			return (NULL);
+			return (0);
 
 		if (format[i] != '%')
 			write(1, &format[i], 1);
@@ -27,7 +27,7 @@ int _printf(const char *format, ...)
 			size--;
 			fun = get_fun(format[i]);
 			if (!fun)
-				return (NULL);
+				return (0);
 
 			size += fun(list);
 		}
