@@ -16,6 +16,9 @@ int _printf(const char *format, ...)
 
 	while (format && format[i])
 	{
+		if (!format[i])
+			return (0);
+
 		if (format[i] != '%')
 			write(1, &format[i], 1);
 		else
