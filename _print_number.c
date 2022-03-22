@@ -8,7 +8,7 @@ int print_number(va_list number)
 
 {
 	int n = va_arg(number, int);
-	int i, d, c, minus, value, size = 0;
+	unsigned int i, d, c, minus, value, size = 0;
 
 	if (n < 0)
 	{
