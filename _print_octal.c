@@ -10,7 +10,7 @@ int print_octal(va_list num)
 
 {
 	int n = va_arg(num, int);
-	int j = 0, d = n, minus_size = 0;
+	int j = 0, d = n;
 	char octal;
 	char *str;
 	char *number;
@@ -24,14 +24,6 @@ int print_octal(va_list num)
 	}
 	if (d == 0)
 		write(1, "0", 1);
-
-	if (n < 0)
-	{
-		write(1, "-", 1);
-		d *= -1;
-		minus_size = 1;
-	}
-
 	while (d != 0)
 	{
 		octal = d % 8 + '0';
@@ -48,5 +40,5 @@ int print_octal(va_list num)
 	}
 	free(number);
 	free(str);
-	return (j + minus_size);
+	return (j);
 }
