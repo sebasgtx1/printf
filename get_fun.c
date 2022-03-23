@@ -18,13 +18,14 @@ int (*get_fun(char format))(va_list)
 	{"u", print_u_number},
 	{"o", print_octal},
 	{"r", print_revstr},
+	{"R", print_root13},
 	{NULL, NULL}
 	};
 	int i;
 
 	i = 0;
 
-	while (i < 16)
+	while (i < 18)
 	{
 		if (format == frts->frt[i])
 			return (frts[i / 2].f);

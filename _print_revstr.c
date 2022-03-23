@@ -1,7 +1,7 @@
 #include "main.h"
 /**
  * print_revstr - prints a string in reverse
- * @list: string to be printed in reverse
+ * @string: string to be printed in reverse
  * Return: string size
  */
 int print_revstr(va_list string)

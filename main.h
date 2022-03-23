@@ -31,6 +31,5 @@ int print_binary(va_list number);
 void reverse_array(char *str);
 int print_octal(va_list num);
 int print_revstr(va_list list);
-
-
+int print_root13(va_list string);
 #endif
