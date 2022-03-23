@@ -10,8 +10,8 @@ int print_octal(va_list num)
 
 {
 	int n = va_arg(num, int);
-	unsigned int j = 0, d = n;
-	char binary;
+	int j = 0, d = n, minus_size = 0;
+	char octal;
 	char *str;
 	char *number;
 
@@ -22,10 +22,20 @@ int print_octal(va_list num)
 		free(number);
 		return (0);
 	}
+	if (d == 0)
+		write(1, "0", 1);
+
+	if (n < 0)
+	{
+		write(1, "-", 1);
+		d *= -1;
+		minus_size = 1;
+	}
+
 	while (d != 0)
 	{
-		binary = d % 8 + '0';
-		number[j] = binary;
+		octal = d % 8 + '0';
+		number[j] = octal;
 		d /= 8;
 		j++;
 	}
@@ -38,5 +48,5 @@ int print_octal(va_list num)
 	}
 	free(number);
 	free(str);
-	return (j);
+	return (j + minus_size);
 }
