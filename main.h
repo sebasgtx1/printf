@@ -32,4 +32,5 @@ void reverse_array(char *str);
 int print_octal(va_list num);
 int print_revstr(va_list list);
 int print_root13(va_list string);
+int print_hexa(va_list number);
 #endif
