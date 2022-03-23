@@ -45,5 +45,5 @@ int print_hexa_up(va_list num)
 		write(1, &number[k], 1), k++;
 	}
 	free(number), free(str);
-	return (k + s);
+	return (k);
 }
