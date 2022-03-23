@@ -24,10 +24,10 @@ int print_root13(va_list string)
 	{
 		for (j = bol = 0; normal[j]; j++)
 		{
-			if (*(str + i) == normal[j])
+			if (str[i] == normal[j])
 			{
 				bol = 1;
-				write(1, &encode[i], 1);
+				write(1, &encode[j], 1);
 				break;
 			}
 		}
