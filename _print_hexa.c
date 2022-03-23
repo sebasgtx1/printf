@@ -7,7 +7,7 @@
 int print_hexa(va_list num)
 {
 	int n = va_arg(num, int);
-	unsigned int i = 0, j = 0, d = n, k = 0, hexa;
+	unsigned int i = 0, j = 0, d1 = n, d = n, k = 0, s = 0, hexa;
 	char *str, *number;
 	int normal[] = {10, 11, 12, 13, 14, 15};
 	char encode[] = "abcdef";
@@ -39,11 +39,11 @@ int print_hexa(va_list num)
 			}
 		d /= 16, j++;
 	}
-	reverse_array(number);
+	reverse_array(number), s = UNS_CASE(d1);
 	while (number[k])
 	{
 		write(1, &number[k], 1), k++;
 	}
 	free(number), free(str);
-	return (k);
+	return (k + s);
 }
