@@ -10,33 +10,28 @@ int print_binary(va_list num)
 
 {
 	int n = va_arg(num, int);
-	unsigned int i = 0, j = 0;
+	unsigned int j = 0, d = n;
 	char binary;
 	char *str;
 	char *number;
 
-	if (n == 0)
+	if (d == 0)
 	{
 		write(1, &n, 1);
 		return (1);
 	}
-	str = _number_to_char(n);
-	while (str[i])
-	{
-		i++;
-	}
-
+	str = _number_to_char(d);
 	number = malloc(32 + 1);
 	if (!number)
 	{
 		free(number);
 		return (0);
 	}
-	while (n != 0)
+	while (d != 0)
 	{
-		binary = n % 2 + '0';
+		binary = d % 2 + '0';
 		number[j] = binary;
-		n /= 2;
+		d /= 2;
 		j++;
 	}
 	reverse_array(number);
