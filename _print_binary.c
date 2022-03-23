@@ -43,5 +43,5 @@ int print_binary(va_list num)
 	}
 	free(number);
 	free(str);
-	return (i);
+	return (j);
 }
