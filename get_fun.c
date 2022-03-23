@@ -20,13 +20,14 @@ int (*get_fun(char format))(va_list)
 	{"r", print_revstr},
 	{"R", print_root13},
 	{"x", print_hexa},
+	{"X", print_hexa_up},
 	{NULL, NULL}
 	};
 	int i;
 
 	i = 0;
 
-	while (i < 20)
+	while (i < 22)
 	{
 		if (format == frts->frt[i])
 			return (frts[i / 2].f);
