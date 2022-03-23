@@ -21,7 +21,7 @@ int print_binary(va_list num)
 		i++;
 	}
 
-	number = malloc(i + 1);
+	number = malloc(32 + 1);
 	if (!number)
 	{
 		free(number);
