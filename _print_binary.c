@@ -41,6 +41,8 @@ int print_binary(va_list num)
 		write(1, &number[j], 1);
 		j++;
 	}
+	if (n < 0)
+		--j;
 	free(number);
 	free(str);
 	return (j);
