@@ -26,7 +26,7 @@ int print_string(va_list str);
 char *_number_to_char(int n);
 int print_number(va_list number);
 int _char_to_number(char *str);
-int print_number_u(unsigned int);
+int print_u_number(va_list number);
 int print_binary(va_list number);
 void reverse_array(char *str);
 
