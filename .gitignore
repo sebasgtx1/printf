@@ -2,5 +2,6 @@
 # ignore main test
 *0-main.c
 *a.out
+*main.c
 #ignore backup
 *backup/

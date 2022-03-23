@@ -29,6 +29,7 @@ int _char_to_number(char *str);
 int print_u_number(va_list number);
 int print_binary(va_list number);
 void reverse_array(char *str);
+int print_octal(va_list num);
 
 
 
