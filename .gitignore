@@ -1,5 +1,6 @@
 #!/bin/bash
 # ignore main test
 *0-main.c
+*a.out
 #ignore backup
 *backup/

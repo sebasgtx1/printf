@@ -10,7 +10,7 @@ int print_binary(va_list num)
 
 {
 	int n = va_arg(num, int);
-	int i = 0, j = 0;
+	unsigned int i = 0, j = 0;
 	char binary;
 	char *str;
 	char *number;
@@ -42,5 +42,6 @@ int print_binary(va_list num)
 		j++;
 	}
 	free(number);
+	free(str);
 	return (i);
 }
