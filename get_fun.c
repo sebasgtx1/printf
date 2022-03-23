@@ -17,13 +17,14 @@ int (*get_fun(char format))(va_list)
 	{"b", print_binary},
 	{"u", print_u_number},
 	{"o", print_octal},
+	{"r", print_revstr},
 	{NULL, NULL}
 	};
 	int i;
 
 	i = 0;
 
-	while (i < 14)
+	while (i < 16)
 	{
 		if (format == frts->frt[i])
 			return (frts[i / 2].f);
