@@ -23,7 +23,11 @@ int print_octal(va_list num)
 		return (0);
 	}
 	if (d == 0)
+	{
 		write(1, "0", 1);
+		return (1);
+	}
+
 	while (d != 0)
 	{
 		octal = d % 8 + '0';
