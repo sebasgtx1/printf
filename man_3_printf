@@ -17,3 +17,4 @@
 .BI "int print_binary(va_list number);"
 .BI "int print_octal(va_list num);"
 .BI "int print_revstr(va_list list);"
+.BI "int print_root13(va_list string);"
