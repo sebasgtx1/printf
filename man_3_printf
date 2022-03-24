@@ -1,2 +1,5 @@
 .\" Holberton School - 0122 - ID: 4543, ID: 4564.
 .\" Manual page for _printf function.
+.TH _printf 3 "25 March 2022" "1.0" "Programmer's Manual for _printf"
+.SH NAME
+ _printf -- formatted output conversion and print data.
