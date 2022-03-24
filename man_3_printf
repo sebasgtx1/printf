@@ -52,3 +52,5 @@ The conversion specifiers and their meanings are:
 .TP
 .B %, %%
 .R If only the \fI%\fR character is written no argument is converted. The complete conversion specification is \fI%%\fR, that returns the actual sign if there in front.
+.SH NOTES
+.R The \fB_printf()\fR is a project collaboration between \fBSebastian Garcia\fR and \fBSebastian Blandon\fR, actual students of Software Engineering at \fBHolberton School\fR.
