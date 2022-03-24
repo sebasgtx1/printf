@@ -26,3 +26,7 @@
 <td><a href="https://github.com/SebasGTX1/printf/blob/master/_print_u_number.c"><code>_print_u_number.c</code></a></td>
 <td>if %u is found in the format, the argument corresponding to the number entered is printed, regardless of whether it is positive or negative.</td>
 </tr>
+<tr>
+<td><a href="https://github.com/SebasGTX1/printf/blob/master/_print_binary.c"><code>_print_binary.c</code></a></td>
+<td>if %b is found in the format, the argument corresponding to the number entered is printed in base 2</td>
+</tr>
