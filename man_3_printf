@@ -54,3 +54,25 @@ The conversion specifiers and their meanings are:
 .R If only the \fI%\fR character is written no argument is converted. The complete conversion specification is \fI%%\fR, that returns the actual sign if there in front.
 .SH NOTES
 .R The \fB_printf()\fR is a project collaboration between \fBSebastian Garcia\fR and \fBSebastian Blandon\fR, actual students of Software Engineering at \fBHolberton School\fR.
+.SH EXAMPLE
+.R To print the the string \fBHello Holberton!\fR and its length in decimal.
+
+#include ''main.h''
+
+int main(void)
+
+{
+
+	int length;
+
+	length = _printf(''%s'', ''Hello, Holberton, _printf project!'')
+
+	_printf('' contains %d characters'', length);
+
+	return (0);
+
+}
+.SH SEE ALSO
+.R printf(3)
+.SH AUTHORS
+Written by \fBSebastian Garcia\fR and \fBSebastian Blandon\fR.
