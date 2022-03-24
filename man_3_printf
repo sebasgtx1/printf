@@ -13,3 +13,4 @@
 .BI "int print_char(va_list str);"
 .BI "int print_string(va_list str);"
 .BI "int print_number(va_list number);"
+.BI "int print_u_number(va_list number);"
