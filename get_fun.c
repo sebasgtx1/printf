@@ -21,13 +21,14 @@ int (*get_fun(char format))(va_list)
 	{"R", print_root13},
 	{"x", print_hexa},
 	{"X", print_hexa_up},
+	{"S", print_npchar},
 	{NULL, NULL}
 	};
 	int i;
 
 	i = 0;
 
-	while (i < 22)
+	while (i < 24)
 	{
 		if (format == frts->frt[i])
 			return (frts[i / 2].f);

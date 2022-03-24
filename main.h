@@ -34,4 +34,5 @@ int print_revstr(va_list list);
 int print_root13(va_list string);
 int print_hexa(va_list number);
 int print_hexa_up(va_list number);
+int print_npchar(va_list string);
 #endif
