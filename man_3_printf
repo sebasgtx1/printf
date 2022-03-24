@@ -7,3 +7,5 @@
 .nf
 .BI _printf (format, arguments...)
 .PP
+.BI "#include 'main.h'"
+.PP
