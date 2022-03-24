@@ -14,3 +14,7 @@
 <td><a href="https://github.com/SebasGTX1/printf/blob/master/_print_char.c"><code>_print_char.c</code></a></td>
 <td>if %c is found in the format, the argument corresponding to char is printed</td>
 </tr>
+<tr>
+<td><a href="https://github.com/SebasGTX1/printf/blob/master/_print_string.c"><code>_print_string.c</code></a></td>
+<td>if %s is in the format, the argument corresponding to the entered array is printed out</td>
+</tr>
