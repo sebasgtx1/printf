@@ -30,3 +30,7 @@
 <td><a href="https://github.com/SebasGTX1/printf/blob/master/_print_binary.c"><code>_print_binary.c</code></a></td>
 <td>if %b is found in the format, the argument corresponding to the number entered is printed in base 2</td>
 </tr>
+<tr>
+<td><a href="https://github.com/SebasGTX1/printf/blob/master/_print_octal.c"><code>_print_octal.c</code></a></td>
+<td>if %o is found in the format, the argument corresponding to the number entered is printed in base 8</td>
+</tr>
