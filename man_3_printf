@@ -3,3 +3,7 @@
 .TH _printf 3 "25 March 2022" "1.0" "Programmer's Manual for _printf"
 .SH NAME
  _printf -- formatted output conversion and print data.
+.SH SYNOPSIS
+.nf
+.BI _printf (format, arguments...)
+.PP
