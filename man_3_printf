@@ -10,3 +10,4 @@
 .BI "#include 'main.h'"
 .PP
 .BI "int _printf(const char *format, ...);"
+.BI "int print_char(va_list str);"
