@@ -12,3 +12,4 @@
 .BI "int _printf(const char *format, ...);"
 .BI "int print_char(va_list str);"
 .BI "int print_string(va_list str);"
+.BI "int print_number(va_list number);"
