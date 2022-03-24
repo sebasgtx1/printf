@@ -8,3 +8,9 @@
 <th>Prototype name</th>
 <th>Conversion Specifiers</th>
 </tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://github.com/SebasGTX1/printf/blob/master/_print_char.c"><code>_print_char.c</code></a></td>
+<td>if %c is found in the format, the argument corresponding to char is printed</td>
+</tr>
