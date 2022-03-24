@@ -20,4 +20,5 @@
 .BI "int print_root13(va_list string);"
 .BI "int print_hexa(va_list number);"
 .BI "int print_hexa_up(va_list number);"
+.BI "int print_npchar(va_list string);"
 .PP
