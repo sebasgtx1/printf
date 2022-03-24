@@ -9,3 +9,4 @@
 .PP
 .BI "#include 'main.h'"
 .PP
+.BI "int _printf(const char *format, ...);"
