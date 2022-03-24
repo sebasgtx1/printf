@@ -22,3 +22,10 @@
 .BI "int print_hexa_up(va_list number);"
 .BI "int print_npchar(va_list string);"
 .PP
+.BI "int (*get_fun(char format))(va_list);"
+.PP
+.BI "int _char_to_number(char *str);"
+.BI "char *_number_to_char(int n);"
+.PP
+.BI "void reverse_array(char *str);"
+.PP
