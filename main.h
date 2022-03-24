@@ -26,10 +26,12 @@ int print_string(va_list str);
 char *_number_to_char(int n);
 int print_number(va_list number);
 int _char_to_number(char *str);
-int print_number_u(unsigned int);
+int print_u_number(va_list number);
 int print_binary(va_list number);
 void reverse_array(char *str);
-
-
-
+int print_octal(va_list num);
+int print_revstr(va_list list);
+int print_root13(va_list string);
+int print_hexa(va_list number);
+int print_hexa_up(va_list number);
 #endif
