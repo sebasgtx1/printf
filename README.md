@@ -18,3 +18,7 @@
 <td><a href="https://github.com/SebasGTX1/printf/blob/master/_print_string.c"><code>_print_string.c</code></a></td>
 <td>if %s is in the format, the argument corresponding to the entered array is printed out</td>
 </tr>
+<tr>
+<td><a href="https://github.com/SebasGTX1/printf/blob/master/_print_number.c"><code>_print_number.c</code></a></td>
+<td>if %d or %i is found in the format, the argument corresponding to the number entered is printed, no matter if it is positive or negative.</td>
+</tr>
