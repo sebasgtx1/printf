@@ -34,3 +34,11 @@
 <td><a href="https://github.com/SebasGTX1/printf/blob/master/_print_octal.c"><code>_print_octal.c</code></a></td>
 <td>if %o is found in the format, the argument corresponding to the number entered is printed in base 8</td>
 </tr>
+<tr>
+<td><a href="https://github.com/SebasGTX1/printf/blob/master/_print_hexa.c"><code>_print_hexa.c</code></a></td>
+<td>if %x is found in the format, the argument corresponding to the number entered is printed in base 16 in lowercase</td>
+</tr>
+<tr>
+<td><a href="https://github.com/SebasGTX1/printf/blob/master/_print_hexa_up.c"><code>_print_hexa_up.c</code></a></td>
+<td>if %X is found in the format, the argument corresponding to the number entered is printed in base 16 in uppercase</td>
+</tr>
