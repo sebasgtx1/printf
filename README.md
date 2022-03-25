@@ -46,6 +46,10 @@
 <td><a href="https://github.com/SebasGTX1/printf/blob/master/_print_revstr.c"><code>_print_revstr.c</code></a></td>
 <td>if %r is found in the format, the argument corresponding to the entered array is printed backwards</td>
 </tr>
+<tr>
+<td><a href="https://github.com/SebasGTX1/printf/blob/master/_print_roo13.c"><code>_print_roo13.c</code></a></td>
+<td>if %R is found in the format, the argument corresponding to the entered array is printed by substituting letters with the equivalent in rot13</td>
+</tr>
 
 
 <p dir="auto">And the additional functions used was the next:</p>
