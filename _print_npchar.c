@@ -52,8 +52,10 @@ int print_npchar(va_list string)
 	if (!str)
 	{
 		for (i = 0; nulcase[i]; i++)
+		{
 			write(1, &nulcase[i], 1);
-		return (6);
+			return (6);
+		}
 	}
 
 	for (j = 0; str[j]; j++)
@@ -70,5 +72,5 @@ int print_npchar(va_list string)
 			size++;
 		}
 	}
-	return (size - 1);
+	return (size);
 }
