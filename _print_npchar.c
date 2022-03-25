@@ -56,7 +56,7 @@ int print_npchar(va_list string)
 		return (6);
 	}
 
-	for (j = 0; str[j]; j++, size++)
+	for (j = 0; str[j]; j++)
 	{
 		if ((str[j] > 0 && str[j] < 32) || str[j] >= 127)
 		{
@@ -67,6 +67,7 @@ int print_npchar(va_list string)
 		else
 		{
 			write(1, &str[j], 1);
+			size++;
 		}
 	}
 	return (size - 1);
