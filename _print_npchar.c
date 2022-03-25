@@ -1,44 +1,35 @@
 #include "main.h"
 
 /**
- * to_hex - converts a value to hex and returns a string
- * with it
+ * to_hex - converts a value to hex
  * @value: value to be converted to hex
- * Return: noting
+ * Return: number of digits of the hex number
  */
-void to_hex(int value)
+int to_hex(int value)
 {
-	int k = 0, i = 0;
-	int normal[] = {10, 11, 12, 13, 14, 15};
-	char encode[] = "ABCDEF";
-	char number[5];
-	int hexa;
-	int count = value;
+	int i = 0;
+	char diference_char = 7;
+	char hex_array[2];
 
-	while (count != 0)
+	hex_array[0] = value / 16;
+	hex_array[1] = value % 16;
+	for (; i < 2; i++)
 	{
-		hexa = count % 16;
-		if (hexa >= 0 && hexa < 9)
-			number[2] = hexa;
+		if (hex_array[i] >= 10)
+		{
+			hex_array[i] += '0' + diference_char;
+			write(1, &hex_array[i], 1);
+		}
+
 		else
-			for (; i < 6; i++)
-			{
-				if (hexa == normal[i])
-				{
-					number[3] = encode[i];
-					break;
-				}
-			}
-		count = (int) value / 16;
+		{
+			hex_array[i] += '0';
+			write(1, &hex_array[i], 1);
+
+		}
 
 	}
-	number[1] = 'x';
-	number[0] = 92;
-
-	for (; k < 5; k++)
-	{
-		write(1, &number[k], 1);
-	}
+	return (i);
 }
 /**
  * print_npchar - prtins \x  followed by the ASCII code value
@@ -53,6 +44,8 @@ int print_npchar(va_list string)
 	int size = 0, i = 0, j;
 	char *nulcase = "(null)";
 	char *str;
+	char bs = 92;
+	char x = 120;
 
 	str = va_arg(string, char *);
 
@@ -67,11 +60,14 @@ int print_npchar(va_list string)
 	{
 		if ((str[j] > 0 && str[j] < 32) || str[j] >= 127)
 		{
-			to_hex((int) str[j]);
-			size += 4;
+			write(1, &bs, 1);
+			write(1, &x, 1);
+			size += 2 + to_hex(str[j]);
 		}
 		else
+		{
 			write(1, &str[j], 1);
+		}
 	}
-	return (size);
+	return (size - 1);
 }

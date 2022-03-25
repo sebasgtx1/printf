@@ -36,7 +36,7 @@ Return the number of characters printed (excluding the null byte used to end out
 .SS Format String Input
 The format string is a character string, which contains two types of directives: ordinary characters which are coppied to the output stream; and conversion specifiers. Each conversion specification is introduced by the character %, and ends with a \fBconversion specifier\fR. When it encounters the \fBconversion specifier\fR it checks the cases internally and then passes the received argument to the function that handles that specific case.
 .SS Conversion Specifiers
-The conversion specifiers and their meanings are: 
+The conversion specifiers and their meanings are:
 .TP
 .B c
 .R The \fIint\fR argument is converted to an \fIchar\fR, and the resulting character is written.
